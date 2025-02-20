@@ -1,13 +1,11 @@
 package com.example.app.domain;
 
-
 import java.time.LocalDateTime;
 
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 import lombok.Data;
-
 
 @Data
 public class Member {
@@ -19,6 +17,6 @@ public class Member {
     @Min(value = 0, message = "0以上の整数を入力してください")
     private Integer age;
     private String address;
-    private Integer typeId;
     private LocalDateTime created;
+    private MemberType type;
 }
