@@ -1,5 +1,13 @@
 package com.example.app.mapper;
 
-public interface MemberMapper {
+import java.util.List;
 
+import org.apache.ibatis.annotations.Mapper;
+
+import com.example.app.domain.Member;
+
+@Mapper
+public interface MemberMapper {
+    List<Member> selectMembers();
+    void addMember(Member member);
 }
